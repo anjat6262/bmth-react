@@ -1,6 +1,43 @@
 import React from 'react';
 import './App.css'; 
 import Discography from './Discography'; 
+// src/App.jsx
+
+import React, { useState } from 'react'; // 1. Import useState
+import './App.css'; 
+// Import komponen lainnya di sini (Header, Members, dll.)
+
+function App() {
+  // 2. Definisikan state untuk tema
+  const [isDarkMode, setIsDarkMode] = useState(true); // Default-nya bisa diatur ke true/false
+
+  // 3. Fungsi untuk mengganti tema
+  const toggleTheme = () => {
+    setIsDarkMode(prevMode => !prevMode);
+  };
+
+  // 4. Tentukan kelas CSS yang akan diterapkan ke kontainer utama
+  const themeClass = isDarkMode ? 'dark-mode' : 'light-mode';
+
+  return (
+    // 5. Terapkan kelas tema pada elemen utama
+    <div className={`App ${themeClass}`}> 
+      
+      {/* Tombol Toggle Tema */}
+      <button onClick={toggleTheme} className="theme-toggle-btn">
+        {isDarkMode ? '🌞 Light Mode' : '🌙 Dark Mode'}
+      </button>
+
+      {/* Komponen-komponen Anda di sini */}
+      {/* <Header /> */}
+      {/* <Members /> */}
+      {/* ... */}
+      
+    </div>
+  );
+}
+
+export default App;
 
 // --- 🛑 PERHATIAN: Impor Gambar di sini (Pastikan nama file dan pathnya benar) ---
 // Asumsikan Anda menaruh gambar di folder 'src/assets/'

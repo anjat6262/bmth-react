@@ -275,3 +275,37 @@ body {
     transform: translate(0);
   }
 }
+/* src/App.css */
+
+/* --- STYLING TEMA --- */
+
+.App {
+  min-height: 100vh;
+  transition: background-color 0.5s, color 0.5s; /* Efek transisi halus */
+}
+
+/* Dark Mode */
+.dark-mode {
+  background-color: #121212; /* Latar belakang sangat gelap */
+  color: #e0e0e0; /* Teks terang */
+}
+
+/* Light Mode */
+.light-mode {
+  background-color: #ffffff; /* Latar belakang putih */
+  color: #1c1c1c; /* Teks gelap */
+}
+
+/* Styling Tombol Toggle */
+.theme-toggle-btn {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  padding: 10px 15px;
+  cursor: pointer;
+  border: none;
+  border-radius: 5px;
+  background-color: #555;
+  color: white;
+  z-index: 100; /* Pastikan tombol di atas elemen lain */
+}
