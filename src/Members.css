@@ -1,0 +1,72 @@
+/* File: Members.css (atau file yang sesuai) */
+
+/* 1. Kontainer Utama Anggota Band */
+.members-container {
+    /* Menggunakan Grid untuk tata letak 2 dimensi */
+    display: grid; 
+    /* Secara default, kita buat 5 kolom yang ukurannya sama */
+    grid-template-columns: repeat(5, 1fr); 
+    /* Jarak antar kolom dan baris */
+    gap: 20px; 
+    /* Memberi jarak di sekeliling */
+    padding: 30px; 
+    max-width: 1200px;
+    margin: 0 auto; /* Tengah di layar besar */
+}
+
+/* 2. Styling untuk Setiap Kartu Anggota */
+.member-card {
+    text-align: center;
+    border: 1px solid #333; /* Border tipis */
+    background-color: #1a1a1a;
+    border-radius: 8px;
+    overflow: hidden;
+    transition: transform 0.3s ease-in-out;
+}
+
+.member-card:hover {
+    transform: translateY(-5px); /* Efek melayang saat kursor diarahkan */
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
+}
+
+.member-card img {
+    width: 100%; /* Gambar mengisi penuh kartu */
+    height: auto;
+    display: block;
+    object-fit: cover; /* Memastikan gambar tidak terdistorsi */
+}
+
+.member-info h3 {
+    margin: 10px 0 5px;
+    color: #eee;
+}
+
+.member-info p {
+    color: #aaa;
+    margin-bottom: 15px;
+    font-style: italic;
+}
+
+/* 3. Responsiveness (Adaptasi untuk Ponsel dan Tablet) */
+@media (max-width: 1024px) {
+    /* Untuk Tablet, ubah menjadi 3 kolom */
+    .members-container {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media (max-width: 600px) {
+    /* Untuk Ponsel, ubah menjadi 2 kolom */
+    .members-container {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 10px;
+        padding: 10px;
+    }
+}
+
+@media (max-width: 400px) {
+    /* Untuk Ponsel sangat kecil, ubah menjadi 1 kolom */
+    .members-container {
+        grid-template-columns: 1fr;
+    }
+}
