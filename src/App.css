@@ -1,0 +1,277 @@
+/* --- GLOBAL STYLING (Modifikasi) --- */
+body {
+  background-color: #050505;
+  color: #e0e0e0;
+  font-family: "Inter", sans-serif; /* Font body yang bersih */
+  margin: 0;
+  padding: 0;
+}
+
+/* Terapkan font Michroma yang Industrial/Futuristik ke Judul */
+.hero-title,
+.section-title,
+.logo {
+  font-family: "Michroma", sans-serif;
+}
+
+/* --- Warna Aksen Neon (Ditingkatkan) --- */
+.neon-text {
+  color: #ff004c;
+  /* Peningkatan efek glow */
+  text-shadow: 0 0 7px #ff004c, /* Sinar tajam */ 0 0 10px #ff004c,
+    /* Sinar sedang */ 0 0 20px rgba(255, 0, 76, 0.7); /* Sinar menyebar */
+}
+
+/* Hover effect di Navbar */
+.navbar .nav-links a:hover {
+  color: #fff; /* Teks putih saat di-hover */
+  text-shadow: 0 0 5px #ff004c; /* Terapkan glow */
+}
+
+/* Button Neon Hover */
+.btn-neon:hover {
+  background-color: #cc003d;
+  box-shadow: 0 0 10px rgba(255, 0, 76, 0.8), 0 0 20px rgba(255, 0, 76, 0.4);
+  transform: scale(1.05); /* Sedikit membesar */
+}
+/* --- NAVBAR STYLING --- */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 50px;
+  background-color: #000;
+  border-bottom: 2px solid #ff004c;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+.navbar .logo {
+  font-size: 1.8rem;
+  font-weight: 700;
+  letter-spacing: 1px;
+}
+.navbar .nav-links a {
+  color: #e0e0e0;
+  text-decoration: none;
+  margin-left: 30px;
+  transition: color 0.3s;
+}
+.navbar .nav-links a:hover {
+  color: #ff004c;
+}
+
+/* --- HERO SECTION STYLING --- */
+.hero-section {
+  padding: 100px 50px;
+  text-align: left;
+  height: 60vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background-color: #000;
+  border-bottom: 5px double #ff004c;
+}
+
+.hero-title {
+  font-size: 4.5rem;
+  font-weight: 900;
+  letter-spacing: 5px;
+  color: white;
+  margin: 0;
+  text-shadow: 2px 2px 0px #ff004c;
+}
+
+.hero-subtitle {
+  font-size: 1.2rem;
+  color: #aaa;
+  margin-bottom: 20px;
+}
+
+/* --- MEMBER SECTION STYLING --- */
+.members-section {
+  padding: 60px 50px;
+  text-align: center;
+}
+
+.members-section h2 {
+  font-size: 2.5rem;
+  margin-bottom: 40px;
+  color: #ff004c;
+}
+
+.member-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 30px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.member-card {
+  background-color: #1a1a1a;
+  padding: 20px 20px 0; /* Padding bawah 0 agar gambar menempel */
+  border: 1px solid #333;
+  border-radius: 5px;
+  transition: border-color 0.3s;
+}
+
+.member-card:hover {
+  border-color: #ff004c;
+}
+
+/* Styling Foto Anggota Band */
+.member-photo {
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+  border-radius: 4px;
+  margin-bottom: 15px;
+  filter: grayscale(80%);
+  transition: filter 0.5s;
+  display: block;
+}
+
+.member-photo:hover {
+  filter: grayscale(0%);
+}
+
+.card-title {
+  font-size: 1.3rem;
+  color: white;
+  margin-bottom: 5px;
+}
+
+.card-role {
+  color: #aaa;
+  font-style: italic;
+  margin-top: 0;
+  padding-bottom: 10px;
+}
+
+/* --- DISCOGRAPHY STYLING --- */
+.discography-section {
+  padding: 80px 50px;
+  text-align: center;
+  background-color: #111;
+}
+
+.section-title {
+  font-size: 2.5rem;
+}
+
+.album-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+  margin-top: 40px;
+}
+
+.album-card {
+  background-color: #0a0a0a;
+  border: 1px solid #333;
+  padding: 20px;
+  width: 300px;
+  border-radius: 8px;
+  text-align: left;
+  transition: all 0.3s ease;
+}
+
+.album-card:hover {
+  border-color: #ff004c;
+  box-shadow: 0 0 15px rgba(255, 0, 76, 0.5);
+  transform: translateY(-5px);
+}
+
+.album-title {
+  font-size: 1.5rem;
+  color: white;
+  margin-bottom: 5px;
+}
+
+.album-year {
+  font-style: italic;
+  color: #888;
+  border-bottom: 1px dashed #333;
+  padding-bottom: 10px;
+  margin-bottom: 10px;
+}
+
+.album-details p {
+  margin: 5px 0;
+  font-size: 0.9rem;
+}
+
+.discography-note {
+  margin-top: 50px;
+  font-size: 0.8rem;
+  color: #777;
+}
+
+/* --- FOOTER --- */
+.footer {
+  padding: 20px;
+  text-align: center;
+  background-color: #000;
+  border-top: 2px solid #111;
+  color: #666;
+  font-size: 0.8rem;
+}
+
+/* --- RESPONSIVE CSS --- */
+@media (max-width: 768px) {
+  .navbar {
+    padding: 15px 20px;
+    flex-direction: column;
+  }
+  .navbar .nav-links a {
+    margin-left: 10px;
+    margin-top: 10px;
+  }
+  .hero-title {
+    font-size: 4.5rem;
+    font-weight: 900;
+    letter-spacing: 5px;
+    color: white;
+    margin: 0;
+    /* Efek visual dasar */
+    text-shadow: 2px 2px 0px #ff004c; 
+    
+    /* 💥 ANIMASI GLITCH DITAMBAHKAN 💥 */
+    animation: glitch 0.5s infinite alternate; /* Animasi berjalan terus menerus dan berulang */
+}
+
+  .member-grid {
+    grid-template-columns: repeat(2, 1fr); /* 2 kolom di HP */
+  }
+  .album-card {
+    width: 100%; /* Kartu mengambil seluruh lebar di HP */
+  }
+  .hero-section,
+  .members-section,
+  .discography-section {
+    padding: 40px 20px;
+  }
+}
+/* --- GLITCH KEYFRAMES --- */
+@keyframes glitch {
+  0% {
+    transform: translate(0);
+  }
+  20% {
+    transform: translate(-2px, 2px);
+  }
+  40% {
+    transform: translate(-2px, -2px);
+  }
+  60% {
+    transform: translate(2px, 2px);
+  }
+  80% {
+    transform: translate(2px, -2px);
+  }
+  100% {
+    transform: translate(0);
+  }
+}
